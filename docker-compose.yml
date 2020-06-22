@@ -1,0 +1,12 @@
+version: "2"
+services:
+  tomcatwar2:
+    hostname: tomcatwar2
+    image: tomcat:latest
+    volumes:
+      - "./target/:/usr/local/tomcat/webapps/"
+    ports:
+      - "38001:8080"
+    entrypoint:
+      - "catalina.sh"
+      - "run"
